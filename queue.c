@@ -163,8 +163,10 @@ void q_reverse(queue_t *q)
     if (!q || q->size < 2) {
         return;
     }
+
     list_ele_t *current = q->head;
-    list_ele_t *prev, *temp = NULL;
+    list_ele_t *prev, *temp;
+    prev = temp = NULL;
 
     while (current) {
         temp = current->next;
